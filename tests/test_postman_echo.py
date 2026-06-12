@@ -5,7 +5,7 @@ def test_get_request():
     url = "https://postman-echo.com/get"
     params = {"name": "Alice", "age": 25}
     response = requests.get(url, params=params)
-    assert response.status_code == 200
+    assert response.status_code == 404
     assert response.json()["args"]["name"] == "Alice"
     assert response.json()["args"]["age"] == "25"
 
